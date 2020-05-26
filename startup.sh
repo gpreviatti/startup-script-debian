@@ -38,21 +38,15 @@ chsh -s /bin/zsh
 
 echo 'installing vim'
 sudo apt install vim -y
-clear
 
-echo 'installing code'
-curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
-sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
-sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
-sudo apt-get install apt-transport-https -y
-sudo apt-get update
-sudo apt-get install code -y # or code-insiders
+echo 'installing vscode'
+sudo snap install code --classic
 
 echo 'installing vscode extensions'
 code --install-extension shan.code-settings-sync
 
 echo 'installing spotify' 
-snap install spotify
+sudo snap install spotify
 
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -71,7 +65,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 
 source ~/.zshrc
-nvm --version
 nvm install --lts
 node --version
 npm --version
@@ -88,9 +81,13 @@ sudo apt-get install terminator -y
 echo 'installing docker' 
 sudo apt install docker docker.io docker-compose -y
 sudo sudo chmod -aG docker $USER
-docker --version
+echo 'you can use docker after rebot machine'
 
 echo 'installing dbeaver'
-wget -c https://dbeaver.io/files/6.0.0/dbeaver-ce_6.0.0_amd64.deb
-sudo dpkg -i dbeaver-ce_6.0.0_amd64.deb
-sudo apt-get install -f
+wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
+sudo dpkg -i dbeaver-ce_latest_amd64.deb
+
+echo 'installing libreoffice'
+sudo snap install libreoffice
+
+echo 'Done, Please Rebot your system 🎉'
