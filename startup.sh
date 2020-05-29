@@ -84,6 +84,7 @@ sudo sudo chmod -aG docker $USER
 echo 'you can use docker after rebot machine'
 
 echo 'installing dbeaver'
+apt install default-jre
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 
