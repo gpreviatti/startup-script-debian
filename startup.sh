@@ -45,9 +45,6 @@ sudo snap install code --classic
 echo 'installing vscode extensions'
 code --install-extension shan.code-settings-sync
 
-echo 'installing spotify' 
-sudo snap install spotify
-
 echo 'installing postman'
 sudo snap install postman
 
@@ -92,5 +89,9 @@ sudo dpkg -i dbeaver-ce_latest_amd64.deb
 
 echo 'installing libreoffice'
 sudo snap install libreoffice
+
+echo 'boutique 💅'
+sudo apt install arc-theme -y
+sudo apt install papirus-icon-theme -y
 
 echo 'Done, Please Rebot your system 🎉'
