@@ -90,8 +90,4 @@ sudo dpkg -i dbeaver-ce_latest_amd64.deb
 echo 'installing libreoffice'
 sudo snap install libreoffice
 
-echo 'boutique 💅'
-sudo apt install arc-theme -y
-sudo apt install papirus-icon-theme -y
-
 echo 'Done, Please Rebot your system 🎉'
