@@ -26,11 +26,6 @@ else
 	echo "Okay, no problem. :) Let's move on!"
 fi
 
-echo "Generating a SSH Key"
-ssh-keygen -t rsa -b 4096 -C $git_config_user_email
-ssh-add ~/.ssh/id_rsa
-cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
-
 echo 'installing zsh'
 sudo apt-get install zsh -y
 sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
@@ -105,5 +100,10 @@ sudo dpkg -i dbeaver-ce_latest_amd64.deb
 
 echo 'installing libreoffice'
 sudo snap install libreoffice
+
+echo "Generating a SSH Key"
+ssh-keygen -t rsa -b 4096 -C $git_config_user_email
+ssh-add ~/.ssh/id_rsa
+cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
 
 echo 'Done!'
