@@ -106,4 +106,4 @@ sudo dpkg -i dbeaver-ce_latest_amd64.deb
 echo 'installing libreoffice'
 sudo snap install libreoffice
 
-echo 'Done, Please Rebot your system 🎉'
+echo 'Done!'
