@@ -52,6 +52,21 @@ echo 'installing chrome'
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
+echo 'installing PHP'
+sudo apt-get install php php-common php-cli php-fpm php-xml php-zip php-mbstring php-gd php-curl php-codesniffer
+
+echo 'installing Composer'
+if hash composer; then
+  echo "Composer Already Installed"
+  echo "You can find it at $(type -p composer)"
+  exit
+fi
+
+# Download latest composer snapshot and run it by php
+sudo wget https://getcomposer.org/composer.phar
+sudo mv composer.phar /bin/composer
+echo "Composer Installed Globally Successfully"
+
 echo 'installing nvm' 
 sh -c "$(curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.34.0/install.sh | bash)"
 
