@@ -1,2 +1,4 @@
 # startup-script-debian
-Script que faz a instalação de pacotes basicos para desenvolvedores em distribuições derivadas de debian
+This script will be install some development common packages to help you day by day, enjoy and send some sugestion if you have
+
+Thanks and best regards 😁
