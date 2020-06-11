@@ -34,13 +34,13 @@ chsh -s /bin/zsh
 echo 'installing vim'
 sudo apt install vim -y
 
-echo 'installing vscode'
+echo 'installing vscode by snap package'
 sudo snap install code --classic
 
 echo 'installing vscode extensions'
 code --install-extension shan.code-settings-sync
 
-echo 'installing postman'
+echo 'installing postman by snap package'
 sudo snap install postman
 
 echo 'installing chrome' 
@@ -85,10 +85,12 @@ echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
 source ~/.zshrc
 
 echo 'installing terminator'
-sudo apt-get update
 sudo apt-get install terminator -y
 
-echo 'installing docker' 
+echo 'installing translate-shell'
+sudo apt install translate-shell
+
+echo 'installing docker'
 sudo apt install docker docker.io docker-compose -y
 sudo sudo chmod -aG docker $USER
 echo 'you can use docker after rebot machine'
@@ -98,7 +100,7 @@ apt install default-jre
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 
-echo 'installing libreoffice'
+echo 'installing libreoffice by snap package'
 sudo snap install libreoffice
 
 echo "Generating a SSH Key"
