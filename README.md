@@ -9,13 +9,13 @@ Thanks and best regards 😁
 wget https://github.com/gpreviatti/startup-script-debian/raw/master/startup.sh
 ```
 
-than change the permisions of script to your own user
+change the permisions of script to able to execute it
 
 ```shell
 chmod 775 startup.sh
 ```
 
-than will can run now
+run 🏃‍♂️
 ```shell
 ./startup.sh
 ```
