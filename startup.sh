@@ -100,9 +100,6 @@ apt install default-jre
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
 sudo dpkg -i dbeaver-ce_latest_amd64.deb
 
-echo 'installing libreoffice by snap package'
-sudo snap install libreoffice
-
 echo "Generating a SSH Key"
 ssh-keygen -t rsa -b 4096 -C $git_config_user_email
 ssh-add ~/.ssh/id_rsa
