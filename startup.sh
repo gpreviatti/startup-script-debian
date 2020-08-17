@@ -26,11 +26,6 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 read git_core_editor_to_vim
 
-echo 'installing zsh'
-sudo apt-get install zsh -y
-sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
-chsh -s /bin/zsh
-
 echo 'installing vscode by snap package'
 sudo snap install code --classic
 
@@ -49,18 +44,6 @@ sudo wget https://getcomposer.org/composer.phar
 sudo mv composer.phar /bin/composer
 echo "Composer Installed Globally Successfully"
 
-echo 'installing zsh autosuggestions' 
-git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
-echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
-source ~/.zshrc
-
-echo 'installing nvm' 
-git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
-source ~/.zsh-nvm/zsh-nvm.plugin.zsh
-nvm install --lts
-node --version
-npm --version
-
 echo 'installing docker'
 sudo apt install docker docker.io docker-compose -y
 sudo groupadd docker
@@ -76,5 +59,23 @@ echo "Generating a SSH Key"
 ssh-keygen -t rsa -b 4096 -C $git_config_user_email
 ssh-add ~/.ssh/id_rsa
 cat ~/.ssh/id_rsa.pub | xclip -selection clipboard
+
+echo 'installing zsh'
+sudo apt-get install zsh -y
+sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+chsh -s /bin/zsh
+
+echo 'installing zsh autosuggestions' 
+git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+echo "source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh" >> ~/.zshrc
+source ~/.zshrc
+
+echo 'installing nvm in zsh'
+git clone https://github.com/lukechilds/zsh-nvm.git ~/.zsh-nvm
+echo "source ~/.zsh-nvm/zsh-nvm.plugin.zsh" >> ~/.zshrc
+zsh
+nvm install --lts
+node --version
+npm --version
 
 echo 'Done!'
