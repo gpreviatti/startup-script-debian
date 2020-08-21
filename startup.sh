@@ -9,9 +9,6 @@ sudo apt install snapd -y
 echo 'installing git' 
 sudo apt install git -y
 
-echo 'installing terminator'
-sudo apt-get install terminator -y
-
 echo 'installing vim'
 sudo apt install vim -y
 
@@ -37,7 +34,7 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
 echo 'installing PHP'
-sudo apt-get install php php-common php-cli php-fpm php-xml php-zip php-mbstring php-gd php-curl php-codesniffer
+sudo apt-get install php php-common php-cli php-fpm php-xml php-zip php-mbstring php-gd php-curl php-codesniffer -y
 
 # Download latest composer snapshot and run it by php
 sudo wget https://getcomposer.org/composer.phar
@@ -50,10 +47,13 @@ sudo groupadd docker
 sudo usermod -aG docker $USER
 echo 'you can use docker after rebot machine'
 
-echo 'installing dbeaver'
-apt install default-jre
+echo 'installing Dbeaver'
+apt install default-jre -y
 wget -c https://dbeaver.io/files/dbeaver-ce_latest_amd64.deb
-sudo dpkg -i dbeaver-ce_latest_amd64.deb
+sudo dpkg -i dbeaver-ce_latest_amd64.deb -y
+
+echo 'installing Remmina'
+sudo apt install remmina -y
 
 echo "Generating a SSH Key"
 ssh-keygen -t rsa -b 4096 -C $git_config_user_email
