@@ -6,6 +6,9 @@ sudo apt install curl -y
 echo 'installing snap package manager'
 sudo apt install snapd -y 
 
+echo 'installing net-tools'
+sudo apt install net-tools -y
+
 echo 'installing git' 
 sudo apt install git -y
 
