@@ -29,9 +29,6 @@ read git_core_editor_to_vim
 echo 'installing vscode by snap package'
 sudo snap install code --classic
 
-echo 'installing postman by snap package'
-sudo snap install postman
-
 echo 'installing chrome' 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
