@@ -16,14 +16,11 @@ read git_config_user_email
 git config --global user.email $git_config_user_email
 read git_core_editor_to_vim
 
-echo "installing vscode by snap package"
-sudo snap install code --classic
-
 echo "installing chrome" 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 
-echo "Would you like to install php packages ? [y/n]"
+echo "Would you like to install php 🐘 packages ? [y/n]"
 read php_packages
 
 if [ $php_packages = 'y' ]
@@ -36,7 +33,22 @@ then
     echo "Composer Installed Globally Successfully"
 fi
 
-echo "Would you like to install Java packages ? [y/n]"
+echo "Would you like to install NodeJs 🟩 packages ? [y/n]"
+read node_packages
+
+if [ $node_packages = 'y' ]
+then
+    echo "Installing NVM (Node Version Manager)"
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.0/install.sh | bash
+    export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+    echo "Installing Node and Npm LTS Version"
+    nvm install --lts
+    echo "Installing JDK"
+fi
+
+echo "Would you like to install Java ☕ packages ? [y/n]"
 read java_packages
 
 if [ $java_packages = 'y' ]
