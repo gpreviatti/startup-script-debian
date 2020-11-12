@@ -3,19 +3,22 @@
 This script will be install some development common packages to help you on day by day, enjoy and send some sugestion if you have.
 Thanks and best regards 😁
 
-# Using
+## Using
 
 download script
+
 ```shell
 wget https://github.com/gpreviatti/startup-script-debian/raw/master/startup.sh
 ```
 
 change the permisions of script to able to execute it
+
 ```shell
 chmod 775 startup.sh
 ```
 
 run 🏃‍♂️
+
 ```shell
 ./startup.sh
 ```
